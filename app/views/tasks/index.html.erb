@@ -1,0 +1,9 @@
+<h1>Liste des Taches</h1>
+<ul>
+  <% @taches.each do |tache| %>
+    <li>
+      <%= link_to tache['name'], tache_path(tache['id']) %>
+      - <%= tache['title'] %> <%= tache['details'] %> <%= tache['completed'] %>
+    </li>
+  <% end %>
+</ul>
